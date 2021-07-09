@@ -9,11 +9,11 @@ import (
 )
 
 func main() {
-	m := "Hello world"
+	m := "Hello world!"
 	// Show a simple hello world message.
-	fmt.Println(m)
+	fmt.Printf("Forwards:\t%v\n", m)
 	// Now reverse the hello world message.
-	fmt.Println(stringutil.Reverse(m))
+	fmt.Printf("Backwards:\t%v\n", stringutil.Reverse(m))
 	// Set properties of the predefined Logger, including
 	// the log entry prefix and a flag to disable printing
 	// the time, source file, and line number.
@@ -31,5 +31,7 @@ func main() {
 
 	// If no error was returned, print the returned message
 	// to the console.
-	fmt.Println(message)
+	for n, g := range message {
+		fmt.Printf("Message for %v:\n\t%v\n", n, g)
+	}
 }
